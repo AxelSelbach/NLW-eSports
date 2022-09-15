@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/bg.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #121214;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
+header {
+  padding-top: 32px;
+  height: calc(120px + 32px);
+}
+
+header div {
+  width: 120px;
+  margin: auto;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  border-radius: 50%;
+
+  display: flex;
+
+  padding: 4px;
+
+  transition: transform .2s;
+
+}
+
+header div:hover {
+  transform: scale(1.1)  
+}
+
+header div img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 32px auto;
+
+  display: grid;
+  gap: 24px;
+
+}
+
+section {
+  color: white;
+
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div {
+  background-color: #2A2634;
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+  
+}
+
+section ul {
+  list-style: none;
+  margin-top: 24px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+section ul li {
+  transition: transform 200ms;
+}
+
+section ul li:hover {
+  transform: scale(1.1);
+}
+
+section h2 {
+  letter-spacing: -0.47px;
+}
+
+section p {
+  letter-spacing: -0.18px;
+
+  color: #A1A1AA;
+}
+
+.games-list img {
+  border-radius: 8px;
+  width: 90px;
+}
+.channel-list img {
+  border-radius: 50%;
+  width: 70px;
+  border: 1px solid #443E54;
+}
+
+/* animation */
+
+header div {
+  animation: fromTop .7s .2s backwards;
+}
+
+/*main section {
+  animation: fromBottom 700ms;
+}*/
+
+main section:nth-child(1) {
+  animation: fromLeft 700ms .4s backwards;
+  /*animation-delay: .4s;
+  animation-fill-mode: backwards;*/
+}
+
+main section:nth-child(2) {
+  animation: fromRight 700ms .6s backwards;
+  /*animation-delay: .6s;
+  animation-fill-mode: backwards;*/
+}
+
+main section:nth-child(3) {
+  animation: fromBottom 700ms .8s backwards;
+  /*animation-delay: .8s;
+  animation-fill-mode: backwards;*/
+}
+
+@keyframes fromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
